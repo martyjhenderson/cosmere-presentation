@@ -308,6 +308,36 @@
       transform: translateY(-2px);
     }
 
+    /* SPOILER WARNING */
+    .spoiler-warning {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background: rgba(180, 60, 60, 0.12);
+      border: 1px solid rgba(220, 80, 80, 0.4);
+      border-radius: var(--radius);
+      max-width: 520px;
+    }
+
+    .spoiler-icon {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .spoiler-text {
+      font-size: 0.88rem;
+      color: rgba(255, 200, 200, 0.85);
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    .spoiler-text strong {
+      color: rgba(255, 180, 180, 1);
+      font-style: italic;
+    }
+
     /* KBD HINTS */
     .kbd-hints {
       display: flex;
@@ -795,6 +825,13 @@
       <div class="home-cta">
         <button class="btn-primary" data-tab="crunch">⚔&nbsp; Explore Crunch</button>
         <button class="btn-outline" data-tab="fluff">✦&nbsp; Explore Fluff</button>
+      </div>
+      <div class="spoiler-warning">
+        <span class="spoiler-icon">⚠️</span>
+        <p class="spoiler-text">
+          <strong>Spoiler Warning</strong> — This presentation contains spoilers for
+          <strong>The Way of Kings</strong> and <strong>Words of Radiance</strong>.
+        </p>
       </div>
       <div class="kbd-hints">
         <div class="kbd-hint"><kbd>1</kbd><span>Home</span></div>
