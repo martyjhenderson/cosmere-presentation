@@ -910,15 +910,14 @@ const CRUNCH = [
     title: 'Core Dice System',
     excerpt: 'The fundamental mechanics — how dice pools resolve actions, challenges, and dramatic moments.',
     content: `
-      <p class="placeholder">[ Describe the core resolution mechanic — dice pools, target numbers, success thresholds, etc. ]</p>
+      <p>The main part of the dice system is a traditional polyhedral set — a d4, d6, d8, d10, d12, and d20. In addition, there is a "plot die" that can cause opportunities, a boon, or complications, a bane.</p>
       <h3>Assembling the Dice Pool</h3>
-      <p class="placeholder">[ How does a player build their pool? Attribute + Skill? Fixed dice? Narrative dice? ]</p>
-      <h3>Reading Results</h3>
-      <p class="placeholder">[ How are successes, failures, and partial successes interpreted? ]</p>
-      <h3>Triumphs &amp; Complications</h3>
-      <p class="placeholder">[ Describe special result symbols or critical outcomes. ]</p>
-      <h3>The Role of the GM</h3>
-      <p class="placeholder">[ How does the GM set difficulty? Opposed rolls? Environmental factors? ]</p>
+      <p>The dice pool is a skill die — derived from a stat — plus a d20, rolled against a target number set by the GM. The GM determines success or failure based on that target number. If the "Stakes are Raised," an opportunity or a failure can add a complexity to the roll from the plot die.</p>
+      <h3>Opportunities &amp; Complications</h3>
+      <p>When the plot die results in a complication, it can add a small amount to the total roll — either +2 or +4, depending on the roll. This may cause a success, even though you roll a complication.</p>
+      <p>Opportunities and Complications generate effects determined by the player and the GM. For instance, an opportunity on a battlefield may result in an allied force arriving to help turn the tide, while a complication may introduce enemy combatants. Even if you succeed with a complication, things will happen! You may successfully pry open a door in a highstorm, but you might lose your favorite prying dagger to the winds in the process!</p>
+      <h3>Roll It All</h3>
+      <p>Whenever you make a check that involves multiple dice, such as an attack roll, you roll all the dice together — the d20, the damage die, and the plot die if you are Raising the Stakes. No need for checking to hit before rolling damage!</p>
     `
   },
   {
@@ -927,37 +926,101 @@ const CRUNCH = [
     title: 'Character Creation',
     excerpt: 'From world of origin to Invested abilities — building the hero who will cross the Cosmere.',
     content: `
-      <p class="placeholder">[ Walk through the character creation steps from start to finish. ]</p>
-      <h3>Step 1 — Choose Your World</h3>
-      <p class="placeholder">[ Roshar, Scadrial, Nalthis, Sel, or another? What does origin grant? ]</p>
-      <h3>Step 2 — Core Attributes</h3>
-      <p class="placeholder">[ What attributes exist and how are they distributed at creation? ]</p>
-      <h3>Step 3 — Skills &amp; Talents</h3>
-      <p class="placeholder">[ How are skills selected or ranked at character creation? ]</p>
-      <h3>Step 4 — Investiture</h3>
-      <p class="placeholder">[ How does a character gain access to magic at creation? Is it rare? ]</p>
-      <h3>Step 5 — Finishing Touches</h3>
-      <p class="placeholder">[ Bonds, equipment starting packages, background traits, etc. ]</p>
+      <h3>Choose Your World</h3>
+      <p>The Cosmere is vast, with many named planets such as Roshar, where the Stormlight Archive takes place, Scadrial — the home of Allomancy — and even the strange planet of Komashi with its hion technology. As of early 2026, only Roshar is available (with Scadrial and Mistborn coming Fall 2026). So selecting your world is easy; you're from Roshar.</p>
+      <h3>Ancestry</h3>
+      <p>One of the first things you will choose is your ancestry, of which Roshar offers two — Humans or Singers.</p>
+      <h3>Culture</h3>
+      <p>Culture is pulled separately from your Ancestry, simply because you can be any ancestry and be affected by your culture. You get up to two cultural experiences, which are mostly regional in Stormlight. Are you a human who grew up in the bureaucracy of Azir? A singer who helped Theylan merchants? Your culture affects your knowledge and language and probably your character's outlook on the world.</p>
+      <h3>Starting Path</h3>
+      <p>An interesting feature of the Cosmere RPG is that classes aren't linear but more of a series of "flowcharts" you can hop between, but you start down one of the paths. Initially, you have to start down a Heroic Path, with Radiant Paths becoming unlocked later — no one starts Radiant!</p>
+      <p>In Stormlight, the Heroic Paths are:</p>
+      <ul>
+        <li><strong>Agent</strong> — The sneaky, manipulative type. Their special ability is the ability to reroll the Plot Die once per round.</li>
+        <li><strong>Envoy</strong> — The face character. They can make one character Determined, a condition explained later in this presentation.</li>
+        <li><strong>Hunter</strong> — Ranged attacker and outdoorsy type. They can choose someone to focus on and gain Advantage against.</li>
+        <li><strong>Leader</strong> — Inspiring commander to others, almost bard-like in traditional TTRPG flavoring. Their special ability is the ability to give a d4 to an ally's check.</li>
+        <li><strong>Scholar</strong> — Thinkers and intelligence-focused folks — both crafters and medics come from this Path. They get the ability to flex some skill points around.</li>
+        <li><strong>Warrior</strong> — The classic in-your-face type problem solver. They get specialty stances that alter how you do combat.</li>
+      </ul>
+      <p>Each of these also have specialties as you progress down the path.</p>
+      <h3>Attributes</h3>
+      <p>There are six attributes: Strength, Speed, Intellect, Willpower, Awareness, and Presence. They go from 0 to 5 total, but at this step in character building nothing can be higher than 3. Initially, you start with 12 points and the recommended distribution is 0, 1, 2, 3, 3, 3 — but you are welcome to do however you want. Go for the min-maxed 0, 0, 3, 3, 3, 3 if you are really feeling it. You cannot have negative numbers for attributes.</p>
+      <ul>
+        <li><strong>Strength</strong> impacts using heavy weapons, carrying things, health, and similar tasks.</li>
+        <li><strong>Speed</strong> affects how fast and far you move plus how you use more agile weapons.</li>
+        <li><strong>Intellect</strong> affects your skills and thoughtful checks.</li>
+        <li><strong>Willpower</strong> affects how well you can recover and focus, among other things.</li>
+        <li><strong>Awareness</strong> is how you see the world, which also impacts how well you sense things (but not limited to vision alone!).</li>
+        <li><strong>Presence</strong> is your force of personality, which has more impact on derived abilities to be covered later.</li>
+      </ul>
+      <h3>Skills and Talents</h3>
+      <p>There are 18 total skills to choose from when building a character, with a couple more added on for some Paths as you level up. For character creation, you get one skill rank based on your Path and then 4 more ranks you can apply across any of the 18. At character creation, you cannot have a skill higher than 2.</p>
+      <p>Each skill has an associated attribute. For instance, Deception uses Presence while Light Weaponry uses Speed. When rolling the skill, it'll be your ranks in that skill and the score for the attribute (plus any conditional modifiers). This is what generates the number to put in the box.</p>
+      <h3>Investiture</h3>
+      <p>At character creation, no one is Invested. Nothing is stopping you from opening the pages to the Radiant Paths and admiring the cool things they can do or the killer art on that page, but it won't impact your starting character — all Heroic Paths can lead to Radiant Paths.</p>
+      <h3>Expertise</h3>
+      <p>Expertise is one of the final things. This is a very narrow subject that you know a lot about. It should be a word or a very, very short phrase such as "Engineering" or "Dances." There are a ton of suggestions in the book, but the choices are pretty open and endless. Your expertises can bypass checks — if you had expertise in Dances, for instance, you might be able to fit in at a ball scene where someone else may need to roll Deception to fit in.</p>
+      <p>You start with 2 expertises plus your Intellect score.</p>
+      <h3>Talents</h3>
+      <p>As you choose your Heroic Path, you will get an initial talent, such as the Warrior's Vigilant Stance. As you level up later, you will get to take more talents down the talent tree, but everyone gets an initial talent from their Heroic Path.</p>
+      <p>Also, based on your Ancestry, you get an Ancestry Talent. There are quite a few options, but the one to really make note of is the Human "Ancestry Bonus Talent," which breaks a few rules — you can choose 1 talent either in progressing your current Heroic Path or the Initial Talent of another Heroic Path. Singers get a special talent tree unique to Singers that they can choose from during character creation.</p>
+      <h3>Equipment</h3>
+      <p>Based on your background, you get a starting kit — which may also have intangible benefits! Your kit will also have "marks," which are Roshar's currency that you can also immediately spend on other such gear.</p>
+      <p>At this point, it'd be good to note that if your armor has a "deflect" value, throw it on your sheet. It'll be used later to figure out how much armor you can ignore, but it's easier to mark it down when you get your equipment.</p>
+      <h3>Story</h3>
+      <p>Two important things to start with are purpose and obstacle. These two things are what drive your character and what stops them from becoming everything they want to be. Obstacle can be a self-inflicted issue like pride or it can be an external factor like not being able to do certain jobs due to the color of your eyes.</p>
+      <p>Goals are what make and break this game and why it'll struggle to be episodic like Organized Play. A goal is a subjective thing you're going for in game — things like "escape the Bridge Crews," the Radiant-specific "swear the First Ideal," or even "Acquire a Shardblade." You have three boxes next to your goal that your GM will tell you to check off as you get closer to completing it. Once you complete a goal, you get a reward, which may be unlocking Radiant Paths, getting a specific possession, titles and grants, or even new relationships with powerful people.</p>
+      <p>You can also start to fill out other finer details like Occupation, Relationships (either in the party or outside the party), Loyalties, Personality, Appearance, and even what Radiant Order you might want to consider.</p>
     `
   },
   {
     icon: '💪',
     tag: 'Statistics',
-    title: 'Attributes &amp; Skills',
-    excerpt: 'The core statistics and trained abilities that define what your character can accomplish.',
+    title: 'The Math',
+    excerpt: 'Resource pools, defenses, recovery, movement, and senses — all the numbers that define your character.',
     content: `
-      <p class="placeholder">[ Overview of the attribute + skill structure. ]</p>
-      <h3>Core Attributes</h3>
+      <h3>Resource Pools</h3>
+      <p>You get three resource pools, though only two initially (the third one comes into play if you become Invested as a Radiant).</p>
+      <p>Health, how much damage you can take, is 10 plus your Strength (plus any other outside bonuses). If your Strength is 0, then you have 10 hit points.</p>
+      <p>Focus is 2 + Willpower (plus any other outside bonuses). If your Willpower were 2, you'd have 4 total Focus.</p>
+      <p>Investiture is something you do not get until you become Radiant and take a Radiant Path. However, if you wanted to calculate it early, it's 2 + the higher of Awareness or Presence (plus any outside bonuses). An Awareness of 2 and a Presence of 1 means you'd have 4 Investiture (an Awareness of 2 is higher than a Presence of 1, and then you add your base 2).</p>
+      <h3>Defenses</h3>
+      <p>You get three defenses — one for physical injury, one for mental activity, and one for your spiritual being.</p>
+      <p>Physical Defense is 10 plus Strength plus Speed (plus any outside bonuses).</p>
+      <p>Cognitive Defense is 10 plus Intellect plus Willpower (plus any outside bonuses).</p>
+      <p>Spiritual Defense is 10 plus Awareness plus Presence (plus any outside bonuses).</p>
+      <h3>Recovery Die</h3>
+      <p>Based on your Willpower attribute:</p>
       <ul>
-        <li class="placeholder">[ Attribute 1 — name and what it covers ]</li>
-        <li class="placeholder">[ Attribute 2 — name and what it covers ]</li>
-        <li class="placeholder">[ Attribute 3 — name and what it covers ]</li>
-        <li class="placeholder">[ Attribute 4 — name and what it covers ]</li>
+        <li>Willpower 0 — 1d4</li>
+        <li>Willpower 1–2 — 1d6</li>
+        <li>Willpower 3–4 — 1d8</li>
+        <li>Willpower 5–6 — 1d10</li>
+        <li>Willpower 7–8 — 1d12</li>
+        <li>Willpower 9+ — 1d20</li>
       </ul>
-      <h3>Skills</h3>
-      <p class="placeholder">[ How do skills relate to attributes? How many does a character have? ]</p>
-      <h3>Advancement</h3>
-      <p class="placeholder">[ How do attributes and skills improve over time? XP? Milestones? ]</p>
+      <h3>Speed</h3>
+      <p>Based on your Speed attribute:</p>
+      <ul>
+        <li>Speed 0 — 20' per action</li>
+        <li>Speed 1–2 — 25' per action</li>
+        <li>Speed 3–4 — 30' per action</li>
+        <li>Speed 5–6 — 40' per action</li>
+        <li>Speed 7–8 — 60' per action</li>
+        <li>Speed 9+ — 80' per action</li>
+      </ul>
+      <h3>Senses</h3>
+      <p>Senses range is only relevant when your main sense is obscured. For instance, if it's in a dark room, your senses range kicks in to tell how far you can sense things are at.</p>
+      <p>Based on your Awareness attribute:</p>
+      <ul>
+        <li>Awareness 0 — 5'</li>
+        <li>Awareness 1–2 — 10'</li>
+        <li>Awareness 3–4 — 20'</li>
+        <li>Awareness 5–6 — 50'</li>
+        <li>Awareness 7–8 — 100'</li>
+        <li>Awareness 9+ — Unaffected</li>
+      </ul>
     `
   },
   {
@@ -966,39 +1029,100 @@ const CRUNCH = [
     title: 'Combat',
     excerpt: 'Structured, deadly encounters — initiative, actions, defense, and the aftermath of battle.',
     content: `
-      <p class="placeholder">[ High-level overview of combat flow. ]</p>
-      <h3>Initiative &amp; Turn Order</h3>
-      <p class="placeholder">[ How is turn order determined? Rolled? Fixed? Popcorn-style? ]</p>
+      <h3>Initiative and Turn Order</h3>
+      <p>Turns are very simple and, I believe, totally stolen from Rollmaster.</p>
+      <p>On your turn, you decide if you're going to have a Fast Turn or a Slow Turn. All PCs go before enemies in each turn order. You can choose a different speed each round and you don't even need to decide at the beginning of the round. You can wait until another PC goes fast that you, too, want to go fast!</p>
+      <p>If you go with a fast turn, you only get two actions on your turn. If you go slow, you get three. Regardless of speed, you get a single reaction in a given turn.</p>
+      <p>Turn order: (1) Fast PCs → (2) Fast enemies → (3) Slow PCs → (4) Slow Enemies</p>
+      <p>It's pretty clean cut, but there are cards available to indicate to the table what you're doing.</p>
       <h3>Actions on Your Turn</h3>
+      <p>There are a lot of actions you can take on your turn! Everyone has the same basic actions before their Paths grant any additional ones. Each action can only be used once a round, unless noted otherwise.</p>
+      <p>Reactions:</p>
       <ul>
-        <li class="placeholder">[ Action type — e.g., Attack ]</li>
-        <li class="placeholder">[ Action type — e.g., Move ]</li>
-        <li class="placeholder">[ Action type — e.g., Use Power ]</li>
-        <li class="placeholder">[ Reaction or free actions? ]</li>
+        <li><strong>Aid</strong> — Spend 1 Focus and give advantage on a (reasonable) check an ally is making</li>
+        <li><strong>Avoid Danger</strong> — Make an Agility Test to avoid imminent danger, like a boulder falling on you</li>
+        <li><strong>Dodge</strong> — Before an enemy targets you with an attack, spend 1 Focus to grant them Disadvantage on the attack</li>
+        <li><strong>Reactive Strike</strong> — When an enemy chooses to leave your reach, spend 1 Focus to do a melee attack against their physical defense</li>
       </ul>
-      <h3>Dealing Damage</h3>
-      <p class="placeholder">[ How is damage calculated and applied? Health pools? Wounds? ]</p>
-      <h3>Defense &amp; Armor</h3>
-      <p class="placeholder">[ How does armor work? Soak? Defense rolls? Passive rating? ]</p>
-      <h3>Conditions &amp; Status</h3>
-      <p class="placeholder">[ List notable conditions — stunned, bleeding, broken, etc. ]</p>
+      <p>Free actions:</p>
+      <ul>
+        <li><strong>Banter</strong> — Talking is free. Arguably, this could include crying. This cannot be used to change attitudes or focus — those are Use a Skill actions.</li>
+        <li><strong>Drop</strong> — Let go of anything you're holding</li>
+      </ul>
+      <p>Single actions:</p>
+      <ul>
+        <li><strong>Brace</strong> — Hide behind reasonable cover to give disadvantage on attacks. This can be used with a shield pretty nicely!</li>
+        <li><strong>Disengage</strong> — Move 5 feet without causing Reactive Strikes</li>
+        <li><strong>Gain Advantage</strong> — Use a skill to give advantage on your next, different skill. For instance, you might use Deception to feint giving your Heavy Weaponry skill advantage.</li>
+        <li><strong>Interact</strong> — Any time you need to interact with an object, like closing a door, retrieve an item from your bag, give something to an ally, or as the rules say "quickly scarf down pancakes"</li>
+        <li><strong>Move</strong> — Move up to your Move speed (Note: this action can be used more than once a round)</li>
+        <li><strong>Ready</strong> — Create a trigger and an action that happens because of the trigger. Please note that this does not allow you to take the same action twice in one round</li>
+        <li><strong>Strike</strong> — Perform an attack with a weapon you have in hand against an enemy's physical defense. Each strike after the first costs 2 Focus and must be made with a different hand.</li>
+        <li><strong>Use a Skill</strong> — Use one of your skills to perform an action, like Medicine to check wounds or Stealth to sneak around</li>
+      </ul>
+      <p>Two-action activities:</p>
+      <ul>
+        <li><strong>Grapple</strong> — Perform an Athletics test against Physical Defense of an enemy. If you succeed, they are Restrained until they are no longer in your reach, you free-action drop the grapple, or you go unconscious.</li>
+        <li><strong>Recover</strong> — Roll a recovery die to get back health and focus. (Note: this can only be used once per scene!)</li>
+        <li><strong>Shove</strong> — Perform an Athletics test against the Physical Defense of an enemy. If you succeed, push them 5 ft away horizontally. This movement can end a grapple!</li>
+      </ul>
+      <h3>Making an Attack</h3>
+      <p>There are three main steps in making an attack: (1) Choose your target, (2) Throw all the dice — attack and damage, (3) Resolve damage.</p>
+      <p>Damage outcomes:</p>
+      <ul>
+        <li><strong>Miss</strong> — Your test fails and nothing happens</li>
+        <li><strong>Graze</strong> — You'd miss but you can spend 1 Focus (per target) to do damage equal to the amount rolled on the die (no other bonuses added)</li>
+        <li><strong>Hit</strong> — You do damage equal to the die plus the modifier for the skill you used</li>
+        <li><strong>Critical Hit</strong> — You can spend an Opportunity to change the hit into a critical. This means you ignore what you rolled on the die and do max damage from the roll.</li>
+      </ul>
+      <p>Note: A 20 is always an Opportunity and a 1 is always a Complication!</p>
+      <h3>Armor Deflection</h3>
+      <p>Defenses are calculated earlier, but your armor can reduce the amount of damage you take by their deflection value. For instance, Chain armor has a deflect value of 2, so it reduces all incoming damage by 2.</p>
+      <h3>Conditions and Status</h3>
+      <p>A variety of things can cause Conditions. For instance, speaking the First Ideal makes you Empowered for the scene, while being grappled makes you Restrained. You can only be under each condition once.</p>
+      <ul>
+        <li><strong>Afflicted</strong> — You take damage at the end of the turn based on the afflicted status. You can be afflicted by this more than once.</li>
+        <li><strong>Determined</strong> — Once, when you fail a test, you can add an Opportunity to the result.</li>
+        <li><strong>Disoriented</strong> — No reaction, you're obscured, and all perception is at disadvantage.</li>
+        <li><strong>Empowered</strong> — Gain advantage on all tests and Investiture refills at the start of each turn.</li>
+        <li><strong>Enhanced</strong> — You gain the bonus to the attribute listed. However, it never affects defenses, max health, max focus, or max Investiture. You can have multiple attributes Enhanced at the same time.</li>
+        <li><strong>Exhausted</strong> — You reduce all skill tests by the amount in brackets. This is cumulative and reduces by 1 for each Long Rest you take.</li>
+        <li><strong>Focused</strong> — Reduce focus costs by 1</li>
+        <li><strong>Immobilized</strong> — Your movement becomes 0 and you can't move or be moved</li>
+        <li><strong>Prone</strong> — You are Slowed and melee attacks have advantage against you. You can Brace without cover. Standing up is a free action, but your movement rate is reduced by 5 until your next turn.</li>
+        <li><strong>Restrained</strong> — Your movement becomes 0 and you have disadvantage on all checks that do not involve you escaping your bonds. GM fiat applies to what checks apply.</li>
+        <li><strong>Slowed</strong> — Your movement is halved, rounded up.</li>
+        <li><strong>Stunned</strong> — You lose any reactions and on your turn you get two fewer actions and don't gain a reaction.</li>
+        <li><strong>Surprised</strong> — You lose any reactions, don't get reactions at the start of combat/on your turn, can't take a Fast Turn, and gain one fewer action.</li>
+        <li><strong>Unconscious</strong> — Your movement rate becomes 0, you can't move or communicate, and you're unaware of your surroundings.</li>
+      </ul>
     `
   },
   {
-    icon: '✨',
-    tag: 'Magic',
-    title: 'Investiture &amp; Powers',
-    excerpt: 'Tapping into the power of the Shards — how magic systems come to life at the table.',
+    icon: '📈',
+    tag: 'Advancement',
+    title: 'Leveling Up',
+    excerpt: 'Milestones, talents, tiers, and rewards — how characters grow beyond where they started.',
     content: `
-      <p class="placeholder">[ What is Investiture in game terms? How is it represented mechanically? ]</p>
-      <h3>Accessing Your Power</h3>
-      <p class="placeholder">[ What does a character do to activate a power? Roll? Resource cost? ]</p>
-      <h3>Resource Management</h3>
-      <p class="placeholder">[ Stormlight charges, metal reserves, Breath, etc. — how are these tracked? ]</p>
-      <h3>Power Progression</h3>
-      <p class="placeholder">[ How do Invested abilities grow? Bonded spren? Metal caches? ]</p>
-      <h3>Risks &amp; Costs</h3>
-      <p class="placeholder">[ Are there risks to using magic? Overspending, backlash, attention? ]</p>
+      <h3>How to Level Up</h3>
+      <p>A GM decides, based on story milestones, when you can level up your character. This triggers the mechanics based on the Character Advancement chart. There are no XP or "level every X hours/sessions" — it's entirely up to the GM when your skills and experiences are ready to become more, in a numerical sense.</p>
+      <p>In addition, as you complete personal goals, you will gain rewards that can also provide new aspects and powers to your character.</p>
+      <h3>Character Advancement</h3>
+      <p>There is a Character Advancement table that shows all the benefits you get, but a simple look from 1–2 shows that you gain no new attribute points, +5 health, a max skill rank of 2, and 1 new talent.</p>
+      <p>The new talent can be on your existing Heroic Path, on a new Heroic Path (where you start with the Initial Trait), or — if you've met your goal for attracting a spren or speaking Ideals — a Radiant Path. You also must pick talents linearly and cannot skip around the chart. Some talents also have prerequisites that must be met.</p>
+      <h3>Tiers of Play</h3>
+      <p>There are intentional caps every 5 levels for things such as max skill ranks, the number of skills and amount of health you gain, and suggestions to the GM on how difficult to make a given scene. There are also premade adventures and scenarios from Brotherwise Games and others that use a recommended tier.</p>
+      <ul>
+        <li><strong>Tier 1</strong> — Levels 1–5</li>
+        <li><strong>Tier 2</strong> — Levels 6–10</li>
+        <li><strong>Tier 3</strong> — Levels 11–15</li>
+        <li><strong>Tier 4</strong> — Levels 16–20</li>
+        <li><strong>Tier 5</strong> — Level 21+</li>
+      </ul>
+      <p>Although you can exceed level 20, the main game system is designed around a level 20 max and things get a bit wobbly past that.</p>
+      <h3>Rewards</h3>
+      <p>One way they allowed both Radiant and non-Radiant characters to have an impact is through Rewards. Radiants will have to focus more on strengthening their bond to their spren and their Ideals. Heroic Paths instead build on getting powerful items, connections, and building an external legend.</p>
+      <p>For instance, while a Radiant will work on a Second Ideal, a Heroic character will gain a Shadeblade or a title and land or a connection to a powerful member of society.</p>
     `
   },
   {
@@ -1007,15 +1131,21 @@ const CRUNCH = [
     title: 'Equipment &amp; Items',
     excerpt: 'Steel and Stormlight — weapons, armor, fabrials, and legendary Shardweapons.',
     content: `
-      <p class="placeholder">[ Overview of the equipment system. Is there encumbrance? Currency? ]</p>
       <h3>Weapons</h3>
-      <p class="placeholder">[ Weapon categories, damage types, special traits. ]</p>
+      <p>Weapons come with a special chart to indicate which skill to use, damage, range, special traits, and expert traits. Expert traits only apply if you have expertise in that weapon, such as Knives having the offhand and throw traits when you're an expert.</p>
+      <p>A knife does 1d4 damage, melee, uses Light Weaponry, and has the discrete trait. A Shortbow has d6 damage, ranged [80/320], two-handed, and the expert trait of Two-Handed, also using Light Weaponry.</p>
+      <p>Ranged specifically announces the basic range, where you roll like normal, or max range, where you roll at disadvantage. For example, [80/320] has up to 80' at normal range but 81'–320' at disadvantage.</p>
       <h3>Armor</h3>
-      <p class="placeholder">[ Armor types, how they interact with defense or damage. ]</p>
+      <p>Armor has a chart much like weapons, except it has a deflect value — how much damage it mitigates. The most common trait is Cumbersome: if you do not meet the Strength in the brackets, you are slowed while wearing it. For instance, Full Plate has Cumbersome [5], meaning you are slowed unless you have a Strength of 5, which is not easy to get to!</p>
       <h3>Shardblades &amp; Shardplate</h3>
-      <p class="placeholder">[ How are these legendary items represented? Are they achievable by PCs? ]</p>
+      <p>Shardblades and Shardplate are special, unique pieces of weapon and armor that can only be earned through rewards.</p>
+      <p>Shardplate has a special set of traits but the most important is "Charges." While it has charges (normally 4), it gives enhanced speed and strength, protection from Invested abilities, and it can deflect Shardblades. It also, when it runs out of charges, can be recharged, though it takes time. An Opportunity against the Shardplate can be used to reduce its charges by 1, getting it closer to losing its enhanced attributes and protection traits.</p>
+      <p>Radiant Shardplate is a bit different, but digging too deep into that spoils books past Words of Radiance. RAFO.</p>
+      <p>Shardblades are one of the few items that do spirit damage — bypassing most armor! You also get a unique injury trait that can cause permanent damage or even death! However, they take a difficult amount of training to use well and are extremely rare, only granted by Rewards. The coolest feature of them is that you can summon and dismiss them once you've spent a week bonding with them, meaning you are never unarmed.</p>
+      <p>Radiant Shardblade? RAFO.</p>
       <h3>Fabrials &amp; Magical Items</h3>
-      <p class="placeholder">[ Describe crafted magical devices and how they function in play. ]</p>
+      <p>Fabrials are a lot like magic items in other systems, but are reliant on Stormlight to work. For instance, a 50-mark heatrial can heat a small space but takes up Stormlight energy to do so. More and more powerful Fabrials, like Soulcasters, expend Stormlight much faster but can do utterly fantastic things.</p>
+      <p>A special Fabrial is available, a Freechair, that is an assistive device to help those with mobility issues to get around. It's encouraged to make this free and low energy cost by GMs for those characters who otherwise have limited mobility.</p>
     `
   }
 ];
