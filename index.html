@@ -441,18 +441,18 @@
        CARD GRID
     =========================================== */
     .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 1.5rem;
       padding: 0.5rem 2.5rem 3.5rem;
       max-width: 1380px;
       margin: 0 auto;
     }
 
-    /* Prevent a lone last card from stretching to full row width */
-    #fluff-grid {
-      grid-template-columns: repeat(auto-fill, minmax(310px, 400px));
-      justify-content: start;
+    .card-grid .card {
+      flex: 0 0 310px;
+      max-width: 400px;
     }
 
     /* ===========================================
@@ -1159,7 +1159,7 @@ const CRUNCH = [
   {
     icon: '🛡️',
     tag: 'Gear',
-    title: 'Equipment &amp; Items',
+    title: 'Equipment & Items',
     excerpt: 'Steel and Stormlight — weapons, armor, fabrials, and legendary Shardweapons.',
     content: `
       <h3>Weapons</h3>
@@ -1264,7 +1264,7 @@ const FLUFF = [
   {
     icon: '📖',
     tag: 'Culture',
-    title: 'Terms, Phrases &amp; Cultural Notes',
+    title: 'Terms, Phrases & Cultural Notes',
     excerpt: 'Eye color, Spren, Shardplate and Shardblades, and Vorinism — the cultural fabric of Roshar.',
     content: `
       <h3>Eye Color</h3>
